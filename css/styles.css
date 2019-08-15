@@ -119,6 +119,37 @@ ul li:nth-child(7):hover~.indicator {
   background: linear-gradient(130deg, purple, palevioletred);
 }
 
+.drop li{
+  display: block;
+  transform:translate(0);
+  transition: all .5s;
+}
+
+.drop ul{
+  padding:0;
+}
+
+.drop ul:hover{
+  padding: 0;
+}
+
+.drop li:hover{
+  border: none;
+  transform: translateX(-10px);
+}
+
+.drop li:hover>a{
+  text-transform: uppercase;
+}
+.drop{
+  position: absolute;
+  display: none;
+}
+
+.d1:hover>.drop{
+  display:block;
+}
+
 @media (max-width:1000px) {
   .depName{
     height:400px;
