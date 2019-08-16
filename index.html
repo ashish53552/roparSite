@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <!-- fontAwesome -->
   <link rel="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" href="/css/master.css">
+  <script src="https://kit.fontawesome.com/b543a6db83.js"></script>
   <script src="https://use.fontawesome.com/d9bc38a878.js"></script>
   <!-- css styleshet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -48,9 +49,9 @@
         <li>
           <a href="#">About Us</a>
         </li>
-        <li class="d1">
-          <a href="#">People</a>
-          <div class="drop">
+        <li class="d1 d1js">
+          <a href="#">People</a><i class="fas droIco fa-caret-down"></i>
+          <div class="drop d1js1">
             <ul>
               <li><a href="#">Faculty</a></li>
               <li><a href="#">Students</a></li>
@@ -58,9 +59,9 @@
             </ul>
           </div>
         </li>
-        <li class="d1">
-          <a href="#">For JEE Aspirants</a>
-          <div class="drop">
+        <li class="d1 d2js">
+          <a href="#">For JEE Aspirants</a><i class="fas droIco fa-caret-down"></i>
+          <div class="drop d2js2">
             <ul>
               <li><a href="#">Testimonials</a></li>
               <li><a href="#">FAQs</a></li>
@@ -82,7 +83,7 @@
 
     </ul>
   </nav>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover" data-touch="true">
+  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover" data-touch="true">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -159,7 +160,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div> -->
 </body>
 <footer>
 </footer>
@@ -169,11 +170,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <!-- o script -->
-<script type="text/javascript">
+<script type="text/javascript" >
   $(document).ready(function() {
     $(".menu").click(function() {
       $("ul").toggleClass('active');
     });
+  });
+  $(".d1js").click(function(){
+    $(".d1js1").toggle("active");
+  });
+  $(".d2js").click(function(){
+    $(".d2js2").toggle("active");
   });
 </script>
 

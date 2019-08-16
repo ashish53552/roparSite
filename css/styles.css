@@ -1,35 +1,41 @@
-
-.deptLogo1{
-  width:10rem;
-  height:10rem;
+.deptLogo1 {
+  width: 10rem;
+  height: 10rem;
   margin: 2rem;
   position: relative;
-  left:80px;
+  left: 80px;
 }
-.headerTitle{
+
+.headerTitle {
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  margin-top:5rem;
+  margin-top: 5rem;
   font-size: 2.5rem;
 }
+
 .depName {
   background: gray url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
   width: 100%;
   margin: 0;
   text-align: center;
-  height: 300px;
-  padding-top: 30px;
+  -moz-animation:slide 20s linear infinite;
   -webkit-animation: slide 20s linear infinite;
 }
+
 @-webkit-keyframes slide {
-    from { background-position: 0 0; }
-    to { background-position: -400px 0; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -400px 0;
+  }
 }
 
 ul {
   list-style: none;
   background-color: rgb(0, 0, 0);
-  padding: 0px;
+  padding: 0;
   position: relative;
 }
 
@@ -54,15 +60,185 @@ ul li:hover>a {
   color: black;
 }
 
-
 .items li:hover {
-  background-color:#d8d8d8;
+  background-color: #d8d8d8;
   z-index: -1;
-  /* border: 2px solid yellow; */
   border-bottom: none;
 }
 
 
+.drop li {
+  display: block;
+  transform: translate(0);
+  transition: all .2s;
+}
+
+.drop ul {
+  padding: 0;
+}
+
+.drop ul:hover {
+  padding: 0;
+}
+
+.drop li:hover {
+  border: none;
+  transform: translateX(-10px);
+}
+
+.drop li:hover>a {
+  text-transform: uppercase;
+}
+
+.drop {
+  z-index: 1;
+  position: absolute;
+  display: none;
+}
+
+.d1:hover>.drop {
+  display: block;
+}
+
+.toggle {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-align: right;
+  font-size: 2rem;
+  display: none;
+}
+
+.ul1 {
+  margin-bottom: 0;
+}
+
+.carousel-item {
+  height: 960px;
+  opacity: .95;
+  transition: all 1s ease;
+}
+
+img {
+  height: 100%;
+  width: inherit;
+}
+
+
+.carousel-item:hover {
+  opacity: 1;
+}
+
+.carousel-caption {
+  transition: all 3s ease;
+}
+
+.carousel-item:hover>.carousel-caption {
+  transform: translateY(-50px);
+  color: black;
+  background: white;
+  font-weight: bold;
+  opacity: .75;
+}
+@media (max-width:980px) {
+  .depName {
+    height: 400px;
+  }
+
+  .headerTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .deptLogo1 {
+    left: auto;
+    right: auto;
+  }
+  .carousel-item{
+    height:400px;
+
+  }
+
+  .drop li {
+    display: block;
+    transform: translate(0);
+    transition: all .2s;
+  }
+  .items li:hover {
+    background-color: black;
+  }
+
+  .drop {
+    position: relative;
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+  ul li:hover>a {
+    text-decoration: none;
+    color: white;
+  }
+
+  ul {
+    width: 100%;
+    display: none;
+    background-color: black;
+  }
+
+  .drop li:hover{
+    background-color: black;
+    border:none;
+  }
+
+  .items li {
+    display: block;
+    text-align: center;
+  }
+
+
+  .items {
+    width: 100%;
+    margin: 0;
+  }
+
+  .indicator {
+    display: none;
+  }
+
+  .drop {
+    position: relative;
+    width: 100%;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .toggle-brand {
+    float: left;
+  }
+
+  span {
+    float: left;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .items {
+    background-color: black;
+  }
+  .droIco{
+    color: white;
+    font-size: 20px;
+    float: right;
+  }
+}
+/*
 .indicator {
   position: absolute;
   height: 2px;
@@ -94,202 +270,31 @@ ul li:nth-child(3):hover~.indicator {
   opacity: 1;
   background: linear-gradient(130deg, purple, palevioletred);
 }
+
 ul li:nth-child(4):hover~.indicator {
   transform: translateX(310px);
   width: 145px;
   opacity: 1;
   background: linear-gradient(130deg, purple, palevioletred);
 }
+
 ul li:nth-child(5):hover~.indicator {
   transform: translateX(480px);
   width: 70px;
   opacity: 1;
   background: linear-gradient(130deg, purple, palevioletred);
 }
+
 ul li:nth-child(6):hover~.indicator {
   transform: translateX(590px);
   width: 75px;
   opacity: 1;
   background: linear-gradient(130deg, purple, palevioletred);
 }
+
 ul li:nth-child(7):hover~.indicator {
   transform: translateX(700px);
   width: 85px;
   opacity: 1;
   background: linear-gradient(130deg, purple, palevioletred);
-}
-
-.drop li{
-  display: block;
-  transform:translate(0);
-  transition: all .2s;
-}
-
-.drop ul{
-  padding:0;
-}
-
-.drop ul:hover{
-  padding: 0;
-}
-
-.drop li:hover{
-  border: none;
-  transform: translateX(-10px);
-}
-
-.drop li:hover>a{
-  text-transform: uppercase;
-}
-.drop{
-  z-index: 1;
-  position: absolute;
-  display: none;
-}
-
-.d1:hover>.drop{
-  display:block;
-}
-
-
-@media (max-width:1000px) {
-  .depName{
-    height:400px;
-
-  }
-  .headerTitle{
-    font-size: 2.5rem;
-    text-align: center;
-    margin:1rem;
-  }
-  .deptLogo1{
-    left:auto;
-    right:auto;
-  }
-}
-.toggle{
-  width:100%;
-  padding:10px 20px;
-  background-color: grey;
-  color: black;
-  text-align: right;
-  font-size: 2rem;
-  box-sizing: border-box;
-  display: none;
-}
-@media (max-width:980px) {
-  .drop li{
-    display: block;
-    transform:translate(0);
-    transition: all .2s;
-  }
-
-  .drop ul{
-    padding:0;
-  }
-
-  .drop ul:hover{
-    padding: 0;
-  }
-
-  .drop li:hover{
-    border: none;
-    transform: translateX(-10px);
-  }
-
-  .drop li:hover>a{
-    text-transform: uppercase;
-  }
-  .drop{
-    z-index: 1;
-    position: absolute;
-    display: none;
-  }
-
-  .d1:hover>.drop{
-    display:block;
-  }
-  .toggle{
-    display: block;
-  }
-  ul{
-    width:100%;
-    position: static;
-    display: none;
-    background-color: grey;
-  }
-  li a{
-    color:Black;
-  }
-  .items li{
-    display: block;
-    text-align: center;
-  }
-  body{
-    margin: 0;
-  }
-  .items{
-    width:100%;
-    margin: 0;
-  }
-  .indicator{
-    display: none;
-  }
-  .drop{
-    position: relative;
-    width: 100%;
-  }
-  .active{
-    display: block;
-  }
-  .toggle-brand{
-    float:left;
-  }
-  span{
-    float: left;
-  }
-  .brand{
-    display: none;
-  }
-  .items{
-    background-color: grey;
-  }
-
-}
-.ul1{
-  margin-bottom: 0;
-}
-.carousel-item{
-  height:100vh;
-  opacity: .95;
-  transition: all 1s ease;
-}
-
-img{
-  height:100vh;
-  width: inherit;
-}
-
-  /* .item1{
-    background-color:blue;
-  } */
-.item2{
-  background-color:red;
-}
-.item3{
-  background-color:yellow;
-}
-.carousel-item:hover{
-  opacity:1;
-
-}
-.carousel-caption{
-  transition: all 3s ease;
-}
-.carousel-item:hover > .carousel-caption{
-  transform: translateY(-50px);
-  color: black;
-  background: white;
-  font-weight: bold;
-  opacity: .75;
-}
+} */
