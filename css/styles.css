@@ -18,7 +18,7 @@
   width: 100%;
   margin: 0;
   text-align: center;
-  -moz-animation:slide 20s linear infinite;
+  -moz-animation: slide 20s linear infinite;
   -webkit-animation: slide 20s linear infinite;
 }
 
@@ -32,14 +32,13 @@
   }
 }
 
-ul {
+.ul1 {
   list-style: none;
   background-color: rgb(0, 0, 0);
   padding: 0;
-  position: relative;
 }
 
-ul li {
+.ul1 li {
   display: inline-block;
   padding: 10px 20px;
   transition: all .3s;
@@ -49,23 +48,25 @@ ul li {
   float: right;
 }
 
-ul li a {
+.droIco {
+  color: white;
+}
+
+.ul1 li a {
   text-decoration: none;
   color: white;
   transition: all .5s ease-out;
 }
 
-ul li:hover>a {
+.ul1 li:hover>a {
   text-decoration: none;
   color: black;
 }
 
 .items li:hover {
   background-color: #d8d8d8;
-  z-index: -1;
-  border-bottom: none;
+  border: none;
 }
-
 
 .drop li {
   display: block;
@@ -91,8 +92,10 @@ ul li:hover>a {
 }
 
 .drop {
+  background-color: black;
   z-index: 1;
   position: absolute;
+  /*****************************/
   display: none;
 }
 
@@ -124,7 +127,6 @@ img {
   width: inherit;
 }
 
-
 .carousel-item:hover {
   opacity: 1;
 }
@@ -139,6 +141,13 @@ img {
   background: white;
   font-weight: bold;
   opacity: .75;
+}
+
+.row1{
+  margin: 0;
+}
+.col1{
+  padding: 0;
 }
 @media (max-width:980px) {
   .depName {
@@ -155,42 +164,40 @@ img {
     left: auto;
     right: auto;
   }
-  .carousel-item{
-    height:400px;
-
+  .d1:hover>.drop {
+    display: none;
   }
 
-  .drop li {
-    display: block;
-    transform: translate(0);
-    transition: all .2s;
+  .carousel-item {
+    height: 400px;
   }
+
   .items li:hover {
     background-color: black;
   }
 
   .drop {
-    position: relative;
     display: none;
   }
 
   .toggle {
     display: block;
   }
-  ul li:hover>a {
+
+  .ul1 li:hover>a {
     text-decoration: none;
     color: white;
   }
 
-  ul {
+  .ul1 {
     width: 100%;
     display: none;
     background-color: black;
   }
 
-  .drop li:hover{
+  .drop li:hover {
     background-color: black;
-    border:none;
+    border: none;
   }
 
   .items li {
@@ -198,8 +205,8 @@ img {
     text-align: center;
   }
 
-
   .items {
+    background-color: black;
     width: 100%;
     margin: 0;
   }
@@ -209,7 +216,7 @@ img {
   }
 
   .drop {
-    position: relative;
+    position: static;
     width: 100%;
   }
 
@@ -217,27 +224,27 @@ img {
     display: block;
   }
 
-  .toggle-brand {
-    float: left;
-  }
-
   span {
     float: left;
   }
 
-  .brand {
+  .ul1 .brand {
     display: none;
   }
 
-  .items {
-    background-color: black;
-  }
-  .droIco{
+
+  .droIco {
     color: white;
     font-size: 20px;
     float: right;
   }
+
+  .new{
+    position: relative;
+  }
 }
+
+
 /*
 .indicator {
   position: absolute;
