@@ -227,7 +227,7 @@ img{
 @media (max-width:980px) {
   img{
     width:inherit;
-    height:inherit;
+    height:500px;
   }
   .col1{
     padding:0;
@@ -256,9 +256,6 @@ img{
     display: none;
   }
 
-  .carousel-item {
-    height: 500px;
-  }
 
   .items li:hover {
     background-color: black;
@@ -272,7 +269,7 @@ img{
     display: block;
   }
 
-  .ul1 li:hover>a {
+  .ul1 .items li:hover>a {
     text-decoration: none;
     color: white;
   }
