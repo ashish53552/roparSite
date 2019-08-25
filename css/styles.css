@@ -44,18 +44,52 @@
 }
 
 .ul1 li a {
+  position: relative;
+  padding: 8px;
   text-decoration: none;
   color: white;
   transition: all .5s ease-out;
 }
+.items a:before{
+  position: absolute;
+  content:'';
+  bottom:0;
+  left:0;
+  width: 100%;
+  height:2px;
+  background:linear-gradient(130deg, #00e2ff, #89ff00);
+  transform:scaleX(0);
+  transform-origin: left;
+  transition: all .5s ease;
+}
 
+.items a:after{
+  position: absolute;
+  content:'';
+  top:0;
+  right:0;
+  width: 100%;
+  height:2px;
+  background:linear-gradient(130deg, #00e2ff, #89ff00);
+  transform:scaleX(0);
+  transform-origin: right;
+  transition: all .5s ease;
+}
+
+.items a:hover:before{
+  transform:scaleX(1);
+
+}
+.items a:hover:after{
+  transform:scaleX(1);
+
+}
 .ul1 .items li:hover>a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .items li:hover {
-  background-color: #d8d8d8;
   border: none;
 }
 
@@ -75,9 +109,11 @@
 
 .drop li:hover {
   border: none;
-  transform: translateX(-10px);
-}
 
+}
+.down{
+  z-index:2;
+}
 .drop li:hover>a {
   text-transform: uppercase;
 }
@@ -183,7 +219,7 @@ img{
   left:0;
   width: 100%;
   height:2px;
-  background:linear-gradient(130deg, #00e2ff, #89ff00);
+  background: linear-gradient(130deg, purple, palevioletred);
   transform:scaleX(0);
   transform-origin: left;
   transition: all .5s ease;
@@ -196,7 +232,7 @@ img{
   right:0;
   width: 100%;
   height:2px;
-  background:linear-gradient(130deg, #00e2ff, #89ff00);
+  background: linear-gradient(130deg, purple, palevioletred);
   transform:scaleX(0);
   transform-origin: right;
   transition: all .5s ease;
