@@ -9,8 +9,9 @@
 .headerTitle {
   font-family: 'Oswald', sans-serif;
   text-align: left;
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-size: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .depName {
@@ -20,16 +21,6 @@
   text-align: center;
   -moz-animation: slide 20s linear infinite;
   -webkit-animation: slide 20s linear infinite;
-}
-
-@-webkit-keyframes slide {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -400px 0;
-  }
 }
 
 .ul1 {
@@ -118,25 +109,25 @@
 
 
 .carousel-item {
-  height:100%;
   opacity: .95;
   transition: all 1s ease;
 }
 
-img {
-  height: inherit;
-  width: inherit;
+img{
+  width:inherit;
+  height:80vh;
 }
-
 .carousel-item:hover {
   opacity: 1;
 }
 
 .carousel-caption {
-  transition: all 1s ease;
+  transition: all 2s ease;
 }
 
 .carousel-item:hover>.carousel-caption {
+  background: white;
+  color:black;
   transform: translateY(-50px);
   font-weight: bold;
   opacity: .75;
@@ -146,6 +137,93 @@ img {
   margin: 0;
 }
 
+.text{
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-family: 'Red Hat Text', sans-serif;
+
+}
+
+.footer .row{
+  margin:2px 30px;
+  margin-bottom: 0;
+}
+
+.footer .col-lg-4{
+  padding-top: 3rem;
+  color:white;
+
+}
+.footer{
+  background-color: black;
+}
+.footer li{
+  list-style: none;
+  padding: 10px;
+  /* transform:translateX(0); */
+  transition:all .5s ease;
+}
+
+
+.footer a{
+  padding: 7px;
+  position: relative;
+  text-decoration: none;
+  color:white;
+}
+.footer h2{
+  /* padding-bottom: 1.5rem; */
+  padding-left: 50px;
+}
+
+.footer a:before{
+  position: absolute;
+  content:'';
+  bottom:0;
+  left:0;
+  width: 100%;
+  height:2px;
+  background:linear-gradient(130deg, #00e2ff, #89ff00);
+  transform:scaleX(0);
+  transform-origin: left;
+  transition: all .5s ease;
+}
+
+.footer a:after{
+  position: absolute;
+  content:'';
+  top:0;
+  right:0;
+  width: 100%;
+  height:2px;
+  background:linear-gradient(130deg, #00e2ff, #89ff00);
+  transform:scaleX(0);
+  transform-origin: right;
+  transition: all .5s ease;
+}
+
+.footer a:hover:before{
+  transform:scaleX(1);
+
+}
+.footer a:hover:after{
+  transform:scaleX(1);
+
+}
+.footer i{
+  color:white;
+  padding: 5px;
+}
+.copyright{
+  background-color: black;
+  display: flex;
+  color:white;
+  justify-content: center;
+  align-items: center;
+}
+.det h2{
+  padding-left: 0;
+}
 @media (max-width:980px) {
   .col1{
     padding:0;
@@ -157,7 +235,7 @@ img {
     opacity: .75;
   }
   .depName {
-    height: 400px;
+    height: 500px;
   }
 
   .headerTitle {
@@ -249,7 +327,15 @@ img {
     position: relative;
   }
 }
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
 
+  to {
+    background-position: -400px 0;
+  }
+}
 
 /*
 .indicator {
