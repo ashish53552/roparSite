@@ -15,6 +15,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "10.16.2"
+  },
   "bugs": {
     "url": "https://github.com/ashish53552/roparSite/issues"
   },
