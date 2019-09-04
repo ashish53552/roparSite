@@ -1,0 +1,27 @@
+.wrapper1 img{
+  margin:10px;
+  border:1px solid black;
+  height:40vw;
+  width:60vw;
+}
+
+.wrapper-container{
+  text-align: center;
+}
+.wrapper1{
+  display: inline-block;
+}
+.blank-space{
+  height: 10px;
+}
+
+.wrapper2 h1,p{
+  margin-top:10px;
+  text-align: left;
+}
+
+@media (max-width:980px) {
+  .wrapper2 h1,p{
+    display: none;
+  }
+}

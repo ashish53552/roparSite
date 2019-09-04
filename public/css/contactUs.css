@@ -1,0 +1,18 @@
+
+.contact p{
+  margin: 2px;
+}
+.contact{
+  margin: 15px 30px;
+}
+
+.wrapper h2{
+  margin: 15px 30px;
+  margin-bottom: 0;
+}
+
+@media (max-width:980px) {
+  .wrapper h2{
+    display: none;
+  }
+}
