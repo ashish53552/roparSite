@@ -35,14 +35,6 @@ app.get("/phdCourses", function(req, res) {
 });
 
 
-
-
-
-let port = process.env.port;
-if (port == null || port == "") {
-  port = 3000;
-}
-
-app.listen(port, function() {
+app.listen(process.env.port||3000, function() {
   console.log("Server Started With port 3000");
 });
