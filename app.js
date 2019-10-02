@@ -33,7 +33,9 @@ app.get("/bTech", function(req, res) {
 app.get("/phdCourses", function(req, res) {
   res.render("phdCourses",{pageTitle:"Ph.D. Courses" ,pageLoad:"phdCourses"});
 });
-
+app.get("/FAQ",function(req,res){
+  res.render("FAQ",{pageTitle:"F.A.Qs",pageLoad:"FAQ"});
+});
 
 app.listen(process.env.PORT||3000, function() {
   console.log("Server Started With port 3000");

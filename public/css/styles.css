@@ -38,7 +38,94 @@ body{
   -moz-animation: slide 20s linear infinite;
   -webkit-animation: slide 20s linear infinite;
 }
-
+.btn1 {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+.btn1 .icon-left {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: 8px;
+  width: 30px;
+  top: 30px;
+  background-color: #212121;
+  left: 0px;
+}
+.btn1 .icon-left:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background-color: #212121;
+  content: "";
+  top: -20px;
+}
+.btn1 .icon-left:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background-color: #212121;
+  content: "";
+  top: 20px;
+}
+.btn1 .icon-left:hover {
+  cursor: pointer;
+}
+.btn1 .icon-right {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: 8px;
+  width: 30px;
+  top: 30px;
+  background-color: #212121;
+  left: 30px;
+}
+.btn1 .icon-right:before {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background-color: #212121;
+  content: "";
+  top: -20px;
+}
+.btn1 .icon-right:after {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background-color: #212121;
+  content: "";
+  top: 20px;
+}
+.btn1.open .icon-left {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.btn1.open .icon-left:before {
+  -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+          transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+}
+.btn1.open .icon-left:after {
+  -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+          transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+}
+.btn1.open .icon-right {
+  transition-duration: 0.5s;
+  background: transparent;
+}
+.btn1.open .icon-right:before {
+  -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+          transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+}
+.btn1.open .icon-right:after {
+  -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+          transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+}
+.btn1:hover {
+  cursor: pointer;
+}
 .ul1 {
   list-style: none;
   background-color: rgb(0, 0, 0);
@@ -127,14 +214,18 @@ body{
 .drop li:hover {
   border: none;
 }
-
+a:not([href]):not([tabindex]) {
+  color: white;
+}
 .down {
+  color:white;
+  cursor:pointer;
   z-index: 5;
 }
 
-.drop li:hover>a {
+/* .drop li:hover>a {
   text-transform: uppercase;
-}
+} */
 
 .drop {
   background-color: black;
@@ -144,8 +235,11 @@ body{
   display: none;
 }
 
-.d1:hover>.drop {
+.d:hover >.drop {
   display: block;
+}
+.dactive{
+  display:block;
 }
 
 .toggle {
@@ -353,7 +447,7 @@ body{
     right: auto;
   }
 
-  .d1:hover>.drop {
+  .d:hover >.drop {
     display: none;
   }
 
@@ -375,8 +469,12 @@ body{
   }
 
   .ul1 {
+    height: 0;
     width: 100%;
-    display: none;
+    transform: scaleY(0);
+    overflow: hidden;
+    transform-origin: top;
+    transition:all 1s ease-in-out;
     background-color: black;
   }
 
@@ -401,11 +499,20 @@ body{
   }
 
   .drop {
+    overflow:visible;
     position: static;
     width: 100%;
   }
 
   .active {
+    display: block;
+  }
+  .active2{
+    overflow: visible;
+    transform: scaleY(1);
+    transition: 1s ease;
+  }
+  .active3{
     display: block;
   }
 
