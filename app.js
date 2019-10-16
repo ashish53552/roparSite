@@ -36,6 +36,9 @@ app.get("/phdCourses", function(req, res) {
 app.get("/FAQ",function(req,res){
   res.render("FAQ",{pageTitle:"F.A.Qs",pageLoad:"FAQ"});
 });
+app.get("/Testimonials",function(req,res){
+  res.render("Testimonials",{pageTitle:"Testimonials",pageLoad:"Testimonials"});
+});
 
 app.listen(process.env.PORT||3000, function() {
   console.log("Server Started With port 3000");
