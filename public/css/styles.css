@@ -276,7 +276,7 @@ a:not([href]):not([tabindex]) {
   -webkit-box-shadow: 21px 33px 39px -5px rgba(9, 10, 10, 0.7);
   -moz-box-shadow: 21px 33px 39px -5px rgba(9, 10, 10, 0.7);
   box-shadow: 21px 33px 39px -5px rgba(9, 10, 10, 0.7);
-  width: 700px;
+  width: 900px;
   height:700px;
   /* transition: all 3s ease; */
 }
